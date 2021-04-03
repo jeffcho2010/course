@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>基礎 HTML 語法教學</title>
+    <meta name="description" content="基礎 HTML 語法教學">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <base target="_blank">
+    <!-- Matomo -->
+    <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//localhost/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+
+            <link rel="stylesheet" href="../assets/css/reveal.css" />
+        <link rel="stylesheet" href="../assets/css/theme/black.css" id="theme" />
+        <link rel="stylesheet" href="../assets/css/code.css" id="theme" />
+        <link rel="preload" href="../assets/js/reveal.js" as="script">
+        <link rel="preload" href="../assets/js/init.js" as="script">
+        <link rel="preload" href="../src/style/main.css" as="style" />
+    <link rel="preload" href="../src/js/main.js" as="script">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="reveal">
+            <div class="slides"><div class="slides">
+    <section>
+        <h1>基礎 HTML 語法教學</h1>
+    </section>
+    <section>
+        <h1>HTML、CSS、Javascript</h1>
+        <ul>
+            <li>HTML：網頁的內容與結構</li>
+            <li>CSS：網頁的外觀</li>
+            <li>Javascript：可以動態改變頁面中的內容及外觀</li>
+        </ul>
+    </section>
+    <section>
+        <h1>HTML基礎架構</h1>
+        <p><a href="../assets/example/html_basic/base.html">範例</a></p>        <p data-markdown>
+            <script type="text/template">
+                ```
+                <html>
+                <!-- 註解：不會顯示在瀏覽器上 -->
+                <head>
+                    <!-- head：網站相關資訊 -->
+                    <meta charset="utf-8">
+                    <title>網頁標題</title>
+                </head>
+                <body>
+                    HTML內容所在
+                </body>
+                </html>                
+                ```
+            </script>
+        </p>
+    </section>
+    <section>
+        <section>
+            <h1>基礎標籤介紹</h1>
+        </section>
+        <section>
+            <h1>div與span</h1>
+            <ul>
+                <li>div：block element</li>
+                <li>span：inline element</li>
+            </ul>
+            <p><a href="../assets/example/html_basic/div-span.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<div>字</div>
+<div>上面只有一個字也會斷行</div>
+<span>雖然原始程式有斷行，</span>
+<span>但這行會跟上面連在一起</span>
+<div>雖然原始程式沒有斷行，</div><div>但這行會斷行</div>                    
+                        ```
+                    </script>
+            </p>
+        </section>
+        <section>
+            <h1>標題、段落、換行</h1>
+            <p><a href="../assets/example/html_basic/p-h-br.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<p>段落<br>強行換第二行</p>
+<h1>標題一</h1>
+<h2>標題二</h2>
+<h3>標題三</h3>
+<h4>標題四</h4>
+<h5>標題五</h5>
+<h6>標題六</h6>                    
+                        ```
+                    </script>
+            </p>
+        </section>
+        <section>
+            <h1>超連結：基礎</h1>
+            <p><a href="../assets/example/html_basic/a-tag.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<a href="https://www.google.com">站外連結：Google</a><br>
+<a href="base.html">站內連結：About</a>                    
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h1>超連結：錨點</h1>
+            <p><a href="../assets/example/html_basic/anchor.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<a href="#Center">錨點 Anchor：去中間 Center</a><br>
+<a href="#Bottom">錨點 Anchor：去底部 Bottom</a>
+<div style="height:2000px;"></div>
+<div id="Center">Center</div>
+<div style="height:2000px;"></div>
+<div id="Bottom">Bottom</div>
+                    ```
+                </script>
+            </p>
+
+        </section>
+        <section>
+            <h1>超連結：另開視窗</h1>
+            <p><a href="../assets/example/html_basic/target.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<a href="https://www.google.com" target="_blank">另開視窗</a><br>
+<a href="https://www.google.com" target="_self">不另開視窗，預設值</a>                    
+```
+                </script>
+            </p>
+
+        </section>
+        <section>
+            <h1>圖片</h1>
+            <p><a href="../assets/example/html_basic/img.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<img src="img/yes.png" alt="替代文字">
+<img src="" alt="破圖的時候，替代文字會顯示出來">                    
+                        ```
+                    </script>
+            </p>
+        </section>
+        <section>
+            <h1>編號列表清單</h1>
+            <p><a href="../assets/example/html_basic/ol.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<ol>
+    <li>項目一</li>
+    <li>項目二</li>
+    <li>項目三</li>
+</ol>                    
+                        ```
+                    </script>
+            </p>
+        </section>
+        <section>
+            <h1>無編號列表清單</h1>
+            <p><a href="../assets/example/html_basic/ul.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+    <ul>
+        <li>唱歌</li>
+        <li>看劇</li>
+        <li>出去玩</li>
+        <li>吃美食</li>
+    </ul>
+                        ```
+                    </script>
+            </p>
+        </section>
+        <section>
+            <h1>影片</h1>
+            <p><a href="../assets/example/html_basic/video.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<video controls>
+    <source src="xxx.mp4" type="video/mp4">
+    你的瀏覽器不支援video標籤
+</video>                    
+                        ```
+                    </script>
+            </p>
+        </section>
+        <section>
+            <h1>音樂</h1>
+            <p><a href="../assets/example/html_basic/audio.html">範例</a></p>            <p data-markdown>
+                <script type="text/template">
+                    ```
+<audio controls>
+    <source src="xxx.mp3" type="audio/mpeg">
+</audio>                    
+                        ```
+                    </script>
+            </p>
+        </section>
+    </section>
+</div>
+</div>
+</div>
+</div>
+    <script src="../assets/lib/js/head.min.js"></script>
+    <script src="../assets/js/reveal.js"></script>
+    <script src="../assets/js/init.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            width: 1600,
+            height: "100%",
+            transition: "slide",
+            dependencies: [{
+                    src: "../assets/lib/js/classList.js",
+                    condition: function() {
+                        return !document.body.classList;
+                    },
+                },
+                {
+                    src: "../assets/plugin/markdown/marked.js",
+                    condition: function() {
+                        return !!document.querySelector("[data-markdown]");
+                    },
+                },
+                {
+                    src: "../assets/plugin/markdown/markdown.js",
+                    condition: function() {
+                        return !!document.querySelector("[data-markdown]");
+                    },
+                },
+                {
+                    src: "../assets/plugin/highlight/highlight.js",
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    },
+                },
+                {
+                    src: "../assets/plugin/search/search.js",
+                    async: true
+                },
+                {
+                    src: "../assets/plugin/zoom-js/zoom.js",
+                    async: true
+                },
+                {
+                    src: "../assets/plugin/notes/notes.js",
+                    async: true
+                },
+            ],
+        });
+    </script>
+<link rel="stylesheet" href="../src/style/main.css" />
+<script defer src="../src/js/main.js"></script>
+</body>
+
+</html>

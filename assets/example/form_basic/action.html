@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基礎表單結果</title>
+</head>
+<body>
+    <script>
+        let url = new URL(location.href);
+        let params = url.searchParams;
+        for (let pair of params.entries()) {
+            var div = document.createElement("div");
+            div.innerText = pair[0] + '：' + pair[1];
+            document.body.appendChild(div)
+        }
+</script>
+</body>
+</html>

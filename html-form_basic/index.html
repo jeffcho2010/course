@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>基礎表單教學</title>
+    <meta name="description" content="基礎表單教學">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <base target="_blank">
+    <!-- Matomo -->
+    <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//localhost/matomo/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+
+            <link rel="stylesheet" href="../assets/css/reveal.css" />
+        <link rel="stylesheet" href="../assets/css/theme/black.css" id="theme" />
+        <link rel="stylesheet" href="../assets/css/code.css" id="theme" />
+        <link rel="preload" href="../assets/js/reveal.js" as="script">
+        <link rel="preload" href="../assets/js/init.js" as="script">
+        <link rel="preload" href="../src/style/main.css" as="style" />
+    <link rel="preload" href="../src/js/main.js" as="script">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="reveal">
+            <div class="slides"><div class="slides">
+    <section>
+        <h1>基礎表單教學</h1>
+    </section>
+    <section>
+        <h1>Form</h1>
+        <ul>
+            <li>主要目的是讓使用者傳送資料給網站管理員</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Form 基礎架構</h1>
+        <p><a href="../assets/example/form_basic/base.html">範例</a></p>        <p data-markdown>
+            <script type="text/template">
+                ```
+                <form method="get" action="action.html">
+                    <div>
+                        <label>帳號：</label>
+                        <input type="text" name="帳號" placeholder="請輸入帳號">
+                    </div>
+                    <div>
+                        <label>密碼：</label>
+                        <input type="password" name="密碼" placeholder="請輸入密碼">
+                    </div>
+                    <input type="submit" value="送出">
+                </form>
+                ```
+            </script>
+        </p>
+    </section>
+    <section>
+        <section>
+            <h2>標籤種類介紹</h2>
+        </section>
+        <section>
+            <h2>文字輸入</h2>
+            <input type="text" name="name" placeholder="請輸入姓名" maxlength="10" value="初始值">
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <input type="text" name="name" placeholder="請輸入姓名" maxlength="10" value="初始值">
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>密碼輸入</h2>
+            <input type="text" name="password" placeholder="請輸入密碼" maxlength="10" value="初始值">
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <input type="text" name="password" placeholder="請輸入密碼" maxlength="10"  value="初始值">
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>單選</h2>
+            男：<input type="radio" name="gender" value="male" checked>女：<input type="radio" name="gender" value="female">
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    男：<input type="radio" name="gender" value="male" checked>
+                    女：<input type="radio" name="gender" value="female">
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>多選</h2>
+            男：<input type="checkbox" name="gender" value="male" checked>女：<input type="checkbox" name="gender" value="female">
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    男：<input type="checkbox" name="gender" value="male" checked>
+                    女：<input type="checkbox" name="gender" value="female">
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>多行文字</h2>
+            <textarea name="textarea" cols="20" rows="3" wrap="off" placeholder="請輸入文字">預設值</textarea>
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <textarea name="textarea" cols="3" rows="3" wrap="off" placeholder="請輸入文字">預設值</textarea>
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>下拉選單</h2>
+            <select>
+                <option value="" disabled selected>請選擇今天要做什麼</option>
+                <option value="sing">唱歌</option>
+                <option value="course">上課</option>
+                <option value="work">工作</option>
+            </select>
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <select>
+                        <option value="" disabled selected>請選擇今天要做什麼</option>
+                        <option value="sing">唱歌</option>
+                        <option value="course">上課</option>
+                        <option value="work">工作</option>
+                    </select>
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>下拉選單多選</h2>
+            <select size="3" multiple>
+                <option value="sing">唱歌</option>
+                <option value="course">上課</option>
+                <option value="work">工作</option>
+            </select>
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <select size="3" multiple>
+                        <option value="sing">唱歌</option>
+                        <option value="course">上課</option>
+                        <option value="work">工作</option>
+                    </select>
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>label 標籤</h2>
+            <label for="text">文字標籤</label>
+            <input type="text" id="text">
+            <label for="name">姓名標籤</label>
+            <input type="text" id="name">
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <label for="text">文字：</label>
+                    <input type="text" id="text">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name">
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>清除</h2>
+            <form>
+                <input type="text">
+                <input type="reset" value="清除">
+            </form>
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <form>
+                        <input type="text">
+                        <input type="reset" value="清除">
+                    </form>
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>送出</h2>
+            <input type="submit" value="送出">
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <input type="submit" value="送出">
+                    ```
+                </script>
+            </p>
+        </section>
+        <section>
+            <h2>按鈕</h2>
+            <button>送出</button>
+            <p data-markdown>
+                <script type="text/template">
+                    ```
+                    <button>送出</button>
+                    ```
+                </script>
+            </p>
+        </section>
+    </section>
+</div>
+</div>
+</div>
+</div>
+    <script src="../assets/lib/js/head.min.js"></script>
+    <script src="../assets/js/reveal.js"></script>
+    <script src="../assets/js/init.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            width: 1600,
+            height: "100%",
+            transition: "slide",
+            dependencies: [{
+                    src: "../assets/lib/js/classList.js",
+                    condition: function() {
+                        return !document.body.classList;
+                    },
+                },
+                {
+                    src: "../assets/plugin/markdown/marked.js",
+                    condition: function() {
+                        return !!document.querySelector("[data-markdown]");
+                    },
+                },
+                {
+                    src: "../assets/plugin/markdown/markdown.js",
+                    condition: function() {
+                        return !!document.querySelector("[data-markdown]");
+                    },
+                },
+                {
+                    src: "../assets/plugin/highlight/highlight.js",
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    },
+                },
+                {
+                    src: "../assets/plugin/search/search.js",
+                    async: true
+                },
+                {
+                    src: "../assets/plugin/zoom-js/zoom.js",
+                    async: true
+                },
+                {
+                    src: "../assets/plugin/notes/notes.js",
+                    async: true
+                },
+            ],
+        });
+    </script>
+<link rel="stylesheet" href="../src/style/main.css" />
+<script defer src="../src/js/main.js"></script>
+</body>
+
+</html>
